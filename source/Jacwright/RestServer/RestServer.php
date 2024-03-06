@@ -433,7 +433,7 @@ class RestServer {
 
 	public function getFormat() {
 		$format = RestFormat::PLAIN;
-		$accept_mod = null;
+		$accept_mod = '';
 
 		if (isset($_SERVER["HTTP_ACCEPT"])) {
 			$accept_mod = preg_replace('/\s+/i', '', $_SERVER['HTTP_ACCEPT']); // ensures that exploding the HTTP_ACCEPT string does not get confused by whitespaces
